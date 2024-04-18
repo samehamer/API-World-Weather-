@@ -17,3 +17,11 @@ This project is an example that was built along with a coursera project showing 
 1. Select the city from the dropdown menu.
 2. Weather will show for next seven days.
 3. You can select other city and it will show the new weather results.
+
+## How to tweak this project for your own uses
+
+Since this is example project, I'd encourage you to clone and rename this project to use your own purposes. It's a good starter boilerplate.
+
+## Find a bug?
+
+If you found an issue or would like to submit an imrovement to this project, please sumit an issue using the issue tab above. If you would like to submit a PR with a fix, refrence the issue you created!
