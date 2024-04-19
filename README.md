@@ -28,4 +28,4 @@ If you found an issue or would like to submit an improvement to this project, pl
 
 ## Known issues (Work in progress)
 
-This app is still ongoing. The API does not respond on the GitHub live page preview but if you download the project and try it will work. This is coming soon.  
+This app is still ongoing. Sometimes the API does not respond on the GitHub live page preview but if you download the project and try it will work. This is coming soon.  
