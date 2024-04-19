@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%230058ff%22></rect><path fill=%22%23fff%22 d=%22M72.15 21.33L72.15 21.33Q74.49 22.50 74.90 25.02Q75.30 27.54 73.59 29.61L73.59 29.61Q72.42 31.23 70.58 31.41Q68.73 31.59 66.84 30.69L66.84 30.69Q64.68 29.70 62.30 29.16Q59.91 28.62 57.30 28.62L57.30 28.62Q52.44 28.62 48.62 30.15Q44.79 31.68 42.09 34.52Q39.39 37.35 38.00 41.22Q36.60 45.09 36.60 49.77L36.60 49.77Q36.60 55.26 38.18 59.31Q39.75 63.36 42.54 66.06Q45.33 68.76 49.11 70.07Q52.89 71.37 57.30 71.37L57.30 71.37Q59.73 71.37 62.16 70.92Q64.59 70.47 66.84 69.30L66.84 69.30Q68.73 68.40 70.58 68.67Q72.42 68.94 73.68 70.56L73.68 70.56Q75.48 72.81 74.99 75.20Q74.49 77.58 72.24 78.66L72.24 78.66Q69.90 79.83 67.43 80.60Q64.95 81.36 62.43 81.77Q59.91 82.17 57.30 82.17L57.30 82.17Q50.82 82.17 45.02 80.10Q39.21 78.03 34.67 73.98Q30.12 69.93 27.51 63.86Q24.90 57.78 24.90 49.77L24.90 49.77Q24.90 42.84 27.29 36.99Q29.67 31.14 34.04 26.87Q38.40 22.59 44.34 20.21Q50.28 17.82 57.30 17.82L57.30 17.82Q61.26 17.82 65.04 18.72Q68.82 19.62 72.15 21.33Z%22></path></svg>" />
+<meta charset="UTF-8">
+<meta http-equiv=“Pragma” content=”no-cache”>
+<meta http-equiv=“Expires” content=”-1″>
+<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+<!-- CSS Stylesheets -->
+<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="css/master.css">
+
+<title>API Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+<!-- Start navbar -->
+
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <i class="fa-solid fa-globe text-white-50 fs-3 text-center"></i><span class="text-white-50 fs-3"> World Weather</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          </div>
+        </div>
+      </nav>
+<!-- End navbar -->
+
+
+<!-- Start HTML form -->
+
+
+
+<div class="d-block p-5 container">
+  <form id="query-form m-center d-block">
+      <select class="m-auto text-center d-block" name="citySelected" id="citySelected" data-toggle="tooltip" onclick="javascript:toolTipReset()" data-placement="bottom" title="" data-original-title="Drop down and select a city to see the forecast">
+        <optgroup label="New">
+          <option disabled="" selected="" value=""> -- select a city -- </option>
+          <option value="{&quot;lat&quot;:&quot;30.039&quot;,&quot;lon&quot;:&quot;31.239&quot;}">Cairo, Egypt</option>
+          <option value="{&quot;lat&quot;:&quot;31.1975&quot;,&quot;lon&quot;:&quot;29.892&quot;}">Alexandria, Egypt</option>
+          <option value="{&quot;lat&quot;:&quot;22.279&quot;,&quot;lon&quot;:&quot;114.188&quot;}">Hong Kong, China</option>
+          <option value="{&quot;lat&quot;:&quot;39.907&quot;,&quot;lon&quot;:&quot;116.397&quot;}">Beijing, China</option>
+          <option value="{&quot;lat&quot;:&quot;35.689&quot;,&quot;lon&quot;:&quot;139.692&quot;}">Tokyo, Japan</option>
+          <option value="{&quot;lat&quot;:&quot;-6.212&quot;,&quot;lon&quot;:&quot;106.842&quot;}">Jakarta, Indonesia</option>
+          <option value="{&quot;lat&quot;:&quot;45.416&quot;,&quot;lon&quot;:&quot;-75.698&quot;}">Ottawa-Gatineau, Canada</option>
+          <option value="{&quot;lat&quot;:&quot;43.741667&quot;,&quot;lon&quot;:&quot;-79.373333&quot;}">Toronto, Canada</option>
+          <option value="{&quot;lat&quot;:&quot;38.895&quot;,&quot;lon&quot;:&quot;-77.036&quot;}">Washington, D.C., USA</option>
+          <option value="{&quot;lat&quot;:&quot;28.667&quot;,&quot;lon&quot;:&quot;77.216&quot;}">Delhi, India</option>
+          <option value="{&quot;lat&quot;:&quot;36.819&quot;,&quot;lon&quot;:&quot;10.166&quot;}">Tunis, Tunisia</option>
+          <option value="{&quot;lat&quot;:&quot;36.753&quot;,&quot;lon&quot;:&quot;3.042&quot;}">El Djazaïr , Algeria</option>
+          <option value="{&quot;lat&quot;:&quot;34.013&quot;,&quot;lon&quot;:&quot;-6.833&quot;}">Rabat, Morocco</option>
+          <option value="{&quot;lat&quot;:&quot;15.552&quot;,&quot;lon&quot;:&quot;32.532&quot;}">Al-Khartum , Sudan</option>
+          <option value="{&quot;lat&quot;:&quot;32.875&quot;,&quot;lon&quot;:&quot;13.188&quot;}">Tarabulus , Libya</option>
+          <option value="{&quot;lat&quot;:&quot;-33.926&quot;,&quot;lon&quot;:&quot;18.423&quot;}">Cape Town, South Africa</option>
+          <option value="{&quot;lat&quot;:&quot;-37.814167&quot;,&quot;lon&quot;:&quot;144.963056&quot;}">Melbourne, Australia</option>
+          <option value="{&quot;lat&quot;:&quot;-33.867778&quot;,&quot;lon&quot;:&quot;151.21&quot;}">Sydney, Australia</option>
+          <option value="{&quot;lat&quot;:&quot;-41.288889&quot;,&quot;lon&quot;:&quot;174.777222&quot;}">Wellington, New Zealand</option>
+          <option value="{&quot;lat&quot;:&quot;-46.60&quot;,&quot;lon&quot;:&quot;168.333333&quot;}">Bluff, New Zealand</option>
+          <option value="{&quot;lat&quot;:&quot;-54.933333&quot;,&quot;lon&quot;:&quot;-67.616667&quot;}">Puerto Williams, Chile</option>
+          <option value="{&quot;lat&quot;:&quot;-33.4375&quot;,&quot;lon&quot;:&quot;-70.65&quot;}">Santiago, Chile</option>
+        </optgroup>
+        <optgroup label="Top Coldest Places on Earth">
+          <option value="{&quot;lat&quot;:&quot;-78.464422&quot;,&quot;lon&quot;:&quot;106.837328&quot;}">Vostok Station, Antarctica (Russia)</option>
+          <option value="{&quot;lat&quot;:&quot;63.0695&quot;,&quot;lon&quot;:&quot;-151.0074&quot;}">Denali, Alaska </option>
+          <option value="{&quot;lat&quot;:&quot;63.460833&quot;,&quot;lon&quot;:&quot;142.785833&quot;}">Oymyakon, Russia </option>
+          <option value="{&quot;lat&quot;:&quot;67.55&quot;,&quot;lon&quot;:&quot;133.383333&quot;}">Verkhoyansk, Russia </option>
+          <option value="{&quot;lat&quot;:&quot;62.03&quot;,&quot;lon&quot;:&quot;129.73&quot;}">Yakutsk, Russia </option>
+          <option value="{&quot;lat&quot;:&quot;69.406389&quot;,&quot;lon&quot;:&quot;86.176389&quot;}">Dudinka, Russia </option>
+          <option value="{&quot;lat&quot;:&quot;-80.366667&quot;,&quot;lon&quot;:&quot;77.35&quot;}">Dome Argus, Antarctica </option>
+          <option value="{&quot;lat&quot;:&quot;78.066667&quot;,&quot;lon&quot;:&quot;-38.483333&quot;}">North Ice, Greenland </option>
+          <option value="{&quot;lat&quot;:&quot;62.383333&quot;,&quot;lon&quot;:&quot;-140.366667&quot;}">Snag, Yukon, Canada </option>
+          <option value="{&quot;lat&quot;:&quot;62.453611&quot;,&quot;lon&quot;:&quot;-114.37&quot;}">Yellowknife, Canada </option>
+          <option value="{&quot;lat&quot;:&quot;64.843611&quot;,&quot;lon&quot;:&quot;-147.723056&quot;}">Fairbanks, United States </option>
+        <optgroup label="Europe">
+          <option value="{&quot;lat&quot;:&quot;52.367&quot;,&quot;lon&quot;:&quot;4.904&quot;}">Amsterdam, Netherlands</option>
+          <option value="{&quot;lat&quot;:&quot;39.933&quot;,&quot;lon&quot;:&quot;32.859&quot;}">Ankara, Turkey</option>
+          <option value="{&quot;lat&quot;:&quot;56.134&quot;,&quot;lon&quot;:&quot;12.945&quot;}">Åstorp, Sweden</option>
+          <option value="{&quot;lat&quot;:&quot;37.983&quot;,&quot;lon&quot;:&quot;23.727&quot;}">Athens, Greece</option>
+          <option value="{&quot;lat&quot;:&quot;54.597&quot;,&quot;lon&quot;:&quot;-5.930&quot;}">Belfast, Northern Ireland, UK</option>
+          <option value="{&quot;lat&quot;:&quot;41.387&quot;,&quot;lon&quot;:&quot;2.168&quot;}">Barcelona, Spain</option>
+          <option value="{&quot;lat&quot;:&quot;52.520&quot;,&quot;lon&quot;:&quot;13.405&quot;}">Berlin, Germany</option>
+          <option value="{&quot;lat&quot;:&quot;46.948&quot;,&quot;lon&quot;:&quot;7.447&quot;}">Bern, Switzerland</option>
+          <option value="{&quot;lat&quot;:&quot;43.263&quot;,&quot;lon&quot;:&quot;-2.935&quot;}">Bilbao, Basque Country, Spain</option>
+          <option value="{&quot;lat&quot;:&quot;50.847&quot;,&quot;lon&quot;:&quot;4.357&quot;}">Brussels, Belgium</option>
+          <option value="{&quot;lat&quot;:&quot;47.497&quot;,&quot;lon&quot;:&quot;19.040&quot;}">Bucharest, Romania</option>
+          <option value="{&quot;lat&quot;:&quot;59.329&quot;,&quot;lon&quot;:&quot;18.068&quot;}">Budapest, Hungary</option>
+          <option value="{&quot;lat&quot;:&quot;51.483&quot;,&quot;lon&quot;:&quot;-3.168&quot;}">Cardiff, Wales, UK</option>
+          <option value="{&quot;lat&quot;:&quot;50.937&quot;,&quot;lon&quot;:&quot;6.96&quot;}">Cologne, Germany</option>
+          <option value="{&quot;lat&quot;:&quot;55.676&quot;,&quot;lon&quot;:&quot;12.568&quot;}">Copenhagen, Denmark</option>
+          <option value="{&quot;lat&quot;:&quot;51.898&quot;,&quot;lon&quot;:&quot;-8.475&quot;}">Cork, Ireland</option>
+          <option value="{&quot;lat&quot;:&quot;53.349&quot;,&quot;lon&quot;:&quot;-6.260&quot;}">Dublin, Ireland</option>
+          <option value="{&quot;lat&quot;:&quot;55.953&quot;,&quot;lon&quot;:&quot;-3.188&quot;}">Edinburgh, Scotland, UK</option>
+          <option value="{&quot;lat&quot;:&quot;43.7696&quot;,&quot;lon&quot;:&quot;11.255&quot;}">Florence, Italy</option>
+          <option value="{&quot;lat&quot;:&quot;50.110&quot;,&quot;lon&quot;:&quot;8.682&quot;}">Frankfurt, Germany</option>        
+          <option value="{&quot;lat&quot;:&quot;43.254&quot;,&quot;lon&quot;:&quot;6.637&quot;}">French Riviera, France</option>
+          <option value="{&quot;lat&quot;:&quot;32.650&quot;,&quot;lon&quot;:&quot;-16.908&quot;}">Funchal, Madeira, Portugual</option>
+          <option value="{&quot;lat&quot;:&quot;36.140&quot;,&quot;lon&quot;:&quot;-5.353&quot;}">Gibraltar, British Territory</option>   
+          <option value="{&quot;lat&quot;:&quot;57.708&quot;,&quot;lon&quot;:&quot;11.974&quot;}">Gothenburg, Sweden</option>     
+          <option value="{&quot;lat&quot;:&quot;53.548&quot;,&quot;lon&quot;:&quot;9.987&quot;}">Hamburg, Germany</option>
+          <option value="{&quot;lat&quot;:&quot;60.169&quot;,&quot;lon&quot;:&quot;24.938&quot;}">Helsinki, Finland</option>
+          <option value="{&quot;lat&quot;:&quot;39.020&quot;,&quot;lon&quot;:&quot;1.482&quot;}">Ibiza, Spain</option>
+          <option value="{&quot;lat&quot;:&quot;50.450&quot;,&quot;lon&quot;:&quot;30.523&quot;}">Kyiv, Ukraine</option>
+          <option value="{&quot;lat&quot;:&quot;61.115&quot;,&quot;lon&quot;:&quot;10.466&quot;}">Lillehammer, Norway</option>
+          <option value="{&quot;lat&quot;:&quot;38.722&quot;,&quot;lon&quot;:&quot;-9.139&quot;}">Lisbon, Portugual</option>
+          <option value="{&quot;lat&quot;:&quot;51.507&quot;,&quot;lon&quot;:&quot;-0.127&quot;}">London, England, UK</option>        
+          <option value="{&quot;lat&quot;:&quot;40.416&quot;,&quot;lon&quot;:&quot;-3.703&quot;}">Madrid, Spain</option>
+          <option value="{&quot;lat&quot;:&quot;39.695&quot;,&quot;lon&quot;:&quot;3.017&quot;}">Mallorca, Spain</option>
+          <option value="{&quot;lat&quot;:&quot;53.480&quot;,&quot;lon&quot;:&quot;-2.242&quot;}">Manchester, England, UK</option>        
+          <option value="{&quot;lat&quot;:&quot;43.296&quot;,&quot;lon&quot;:&quot;5.369&quot;}">Marseille, France</option>
+          <option value="{&quot;lat&quot;:&quot;27.760&quot;,&quot;lon&quot;:&quot;-15.586&quot;}">Maspalomas, Gran Canaria, Spain</option>
+          <option value="{&quot;lat&quot;:&quot;45.464&quot;,&quot;lon&quot;:&quot;9.190&quot;}">Milan, Italy</option>
+          <option value="{&quot;lat&quot;:&quot;48.135&quot;,&quot;lon&quot;:&quot;11.582&quot;}">Munich, Germany</option>
+          <option value="{&quot;lat&quot;:&quot;40.851&quot;,&quot;lon&quot;:&quot;14.268&quot;}">Naples, Italy</option>
+          <option value="{&quot;lat&quot;:&quot;43.034&quot;,&quot;lon&quot;:&quot;-2.417&quot;}">Oñati, Basque Country, Spain</option>
+          <option value="{&quot;lat&quot;:&quot;59.913&quot;,&quot;lon&quot;:&quot;10.752&quot;}">Oslo, Norway</option>
+          <option value="{&quot;lat&quot;:&quot;48.856&quot;,&quot;lon&quot;:&quot;2.352&quot;}">Paris, France</option>
+          <option value="{&quot;lat&quot;:&quot;50.075&quot;,&quot;lon&quot;:&quot;14.437&quot;}">Prague, Czech Republic</option>
+          <option value="{&quot;lat&quot;:&quot;64.146&quot;,&quot;lon&quot;:&quot;-21.942&quot;}">Reykjavík, Iceland</option>
+          <option value="{&quot;lat&quot;:&quot;56.879&quot;,&quot;lon&quot;:&quot;24.603&quot;}">Riga, Latvia</option>
+          <option value="{&quot;lat&quot;:&quot;41.902&quot;,&quot;lon&quot;:&quot;12.496&quot;}">Rome, Italy</option>
+          <option value="{&quot;lat&quot;:&quot;39.453&quot;,&quot;lon&quot;:&quot;-31.127&quot;}">Santa Cruz das Flores, Azores, Portugual</option>
+          <option value="{&quot;lat&quot;:&quot;28.463&quot;,&quot;lon&quot;:&quot;-16.251&quot;}">Santa Cruz de Tenerife, Tenerife, Spain</option>
+          <option value="{&quot;lat&quot;:&quot;57.273&quot;,&quot;lon&quot;:&quot;-6.215&quot;}">Skye, Scotland, UK</option>
+          <option value="{&quot;lat&quot;:&quot;42.697&quot;,&quot;lon&quot;:&quot;23.321&quot;}">Sofia, Bulgaria</option>
+          <option value="{&quot;lat&quot;:&quot;59.329&quot;,&quot;lon&quot;:&quot;18.068&quot;}">Stockholm, Sweden</option>
+          <option value="{&quot;lat&quot;:&quot;59.437&quot;,&quot;lon&quot;:&quot;24.753&quot;}">Tallinn, Estonia</option>
+          <option value="{&quot;lat&quot;:&quot;18.208&quot;,&quot;lon&quot;:&quot;16.373&quot;}">Vienna, Austria</option>
+          <option value="{&quot;lat&quot;:&quot;52.229&quot;,&quot;lon&quot;:&quot;21.012&quot;}">Warsaw, Poland</option>
+          <option value="{&quot;lat&quot;:&quot;53.961&quot;,&quot;lon&quot;:&quot;-1.07&quot;}">York, England, UK</option>
+          <option value="{&quot;lat&quot;:&quot;47.376&quot;,&quot;lon&quot;:&quot;8.541&quot;}">Zurich, Switzerland</option>
+        </optgroup>
+      </select>
+  </form>
+</div>
+
+
+
+<!-- End HTML form -->
+
+<!-- Start Weather Cards -->
+
+<div class="row row-cols-25 col-sm-12 w-80 g-3 p-4" id="weather">
+  <div class="col " id="ht1">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title day1 fs-5" id="day1" style="width: 6rem" >Card title</h5>
+        <img class="img-fluid day1i" id="day1i" src="images/clear.png" alt="">
+        <h5 class="card-temp day1t fs-5 text-center mb-1 mt-1" id="day1tw">weather</h5>
+        <h2 class="card-temp day1t fs-1 text-center mb-1 mt-1" id="day1t">Temp</h2>
+        <h5 class="card-temp day1t fs-3 text-center mb-1 mt-1 text-black-50 " id="day1tf">Temp F</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col" id="ht2">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title day2 fs-5" id="day2" style="width: 6rem">Card title</h5>
+        <img class="img-fluid day2i" id="day2i" src="images/clear.png" alt="">
+        <h5 class="card-temp day2t fs-5 text-center mb-1 mt-1" id="day2tw">weather</h5>
+        <h2 class="card-temp day2t fs-1 text-center mb-1 mt-1" id="day2t">Temp</h2>
+        <h5 class="card-temp day2t fs-3 text-center mb-1 mt-1 text-black-50 " id="day2tf">Temp F</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col" id="ht3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title day1 fs-5" id="day3" style="width: 6rem">Card title</h5>
+        <img class="img-fluid day1i" id="day3i" src="images/clear.png" alt="">
+        <h5 class="card-temp day1t fs-5 text-center mb-1 mt-1" id="day3tw">weather</h5>
+        <h2 class="card-temp day1t fs-1 text-center mb-1 mt-1" id="day3t">Temp</h2>
+        <h5 class="card-temp day1t fs-3 text-center mb-1 mt-1 text-black-50 " id="day3tf">Temp F</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col" id="ht4">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title day1 fs-5" id="day4" style="width: 6rem">Card title</h5>
+        <img class="img-fluid day1i" id="day4i" src="images/clear.png" alt="">
+        <h5 class="card-temp day1t fs-5 text-center mb-1 mt-1" id="day4tw">weather</h5>
+        <h2 class="card-temp day1t fs-1 text-center mb-1 mt-1" id="day4t">Temp</h2>
+        <h5 class="card-temp day1t fs-3 text-center mb-1 mt-1 text-black-50 " id="day4tf">Temp F</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col" id="ht5">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title day1 fs-5" id="day5" style="width: 6rem">Card title</h5>
+        <img class="img-fluid day1i" id="day5i" src="images/clear.png" alt="">
+        <h5 class="card-temp day1t fs-5 text-center mb-1 mt-1" id="day5tw">weather</h5>
+        <h2 class="card-temp day1t fs-1 text-center mb-1 mt-1" id="day5t">Temp</h2>
+        <h5 class="card-temp day1t fs-3 text-center mb-1 mt-1 text-black-50 " id="day5tf">Temp F</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col" id="ht6">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title day6 fs-5" id="day6" style="width: 6rem">Card title</h5>
+        <img class="img-fluid day6i" id="day6i" src="images/clear.png" alt="">
+        <h5 class="card-temp day6t fs-5 text-center mb-1 mt-1" id="day6tw">weather</h5>
+        <h2 class="card-temp day6t fs-1 text-center mb-1 mt-1" id="day6t">Temp</h2>
+        <h5 class="card-temp day6t fs-3 text-center mb-1 mt-1 text-black-50 " id="day6tf">Temp F</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col" id="ht7">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title day7 fs-5" id="day7" style="width: 6rem">Card title</h5>
+        <img class="img-fluid day7i" id="day7i" src="images/clear.png" alt="">
+        <h5 class="card-temp day7t fs-5 text-center mb-1 mt-1" id="day7tw">weather</h5>
+        <h2 class="card-temp day7t fs-1 text-center mb-1 mt-1" id="day7t">Temp</h2>
+        <h5 class="card-temp day7t fs-3 text-center mb-1 mt-1 text-black-50 " id="day7tf">Temp F</h5>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+
+<!-- End Weather Cards -->
+
+
+  <footer class="mb-0">
+      <p class="copyright-text text-center mb-1 text-white-50">© Copyright 2024 </p>
+  </footer>
+
+  <!-- Our codes -->
+  <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+  <script src="js/all.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+
+</body>

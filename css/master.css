@@ -1,0 +1,33 @@
+:root {
+    --dark-color: #19283f;
+    --dark-color-2: #2e405c;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: hsl(0, 0%, 84%);
+    background-color: var(--dark-color-2);
+    color: black;
+}
+
+/* Start navbar  */
+.navbar {
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar a :active {
+    color: red;
+}
+/* End navbar  */
+
+/* Start Weather */
+.card-body h5:first-child {
+    text-align: center;
+}
+
+/* End Weather*/
