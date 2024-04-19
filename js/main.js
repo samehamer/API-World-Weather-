@@ -39,8 +39,9 @@ let finalRe = /-*\d*\d*\d.\d\d/g;
 
 
 // console.log(contents.match(lonRe)); // Array [ 'lon":"31.23' ]
-console.log(city.match(lonRe)[0].match(finalRe)[0]); // 31.23
-console.log(city.match(latRe)[0].match(finalRe)[0]); // 30.03
+// console.log(city.match(lonRe)[0].match(finalRe)[0]); // 31.23
+// console.log(city.match(latRe)[0].match(finalRe)[0]); // 30.03
+
 
 let lat = city.match(latRe)[0].match(finalRe)[0];
 let lon = city.match(lonRe)[0].match(finalRe)[0];
