@@ -132,7 +132,7 @@ fetch(`http://www.7timer.info/bin/api.pl?lon=${lon}&lat=${lat}&product=civil&out
 })
 .catch(error => {
     console.log(error);
-    weather.style.display = "none";
+    // weather.style.display = "none";
 });
 
 
